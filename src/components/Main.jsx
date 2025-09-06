@@ -1,9 +1,11 @@
+import HowItWorks from "./HowItWorks";
 import ImpactCounter from "./ImpactCounter";
 
 const Main = () => {
     return (
-        <div className="">
+        <div>
             <ImpactCounter></ImpactCounter>
+            <HowItWorks></HowItWorks>
         </div>
     );
 };
