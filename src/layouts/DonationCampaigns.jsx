@@ -12,7 +12,7 @@ const DonationCampaigns = () => {
                 <title>Donation Campaigns || ClothAid</title>
             </Helmet>
             <div>
-                <section className="bg-white shadow-2xl p-10 my-10 rounded-xl">
+                <section className="bg-white border border-gray-300 p-10 my-10 rounded-xl">
                     <div>
                         <h2 className="mb-7 text-3xl font-bold">Find Campaigns</h2>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
@@ -63,6 +63,7 @@ const DonationCampaigns = () => {
                     </div>
                 </section>
             </div>
+            <h1 className="text-4xl font-bold my-10">Current Campaigns</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
                 data?.map(campaignData => <DonationCampaign key={campaignData.id} campaignData={campaignData}></DonationCampaign>)

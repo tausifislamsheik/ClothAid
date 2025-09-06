@@ -2,7 +2,7 @@ const DonationCampaign = ({campaignData}) => {
 
     const {img, title, description, division} = campaignData;
     return (
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 border border-gray-300 p-5 transition-transform duration-400 hover:scale-105">
             <figure>
                 <img
                 className="h-[200px] w-full object-cover"
