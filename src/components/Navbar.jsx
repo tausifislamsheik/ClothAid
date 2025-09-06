@@ -6,16 +6,16 @@ const Navbar = () => {
 
     const navLinks = <>
             <NavLink to='/' className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-[#d94d5a] font-semibold" : ""
+                    isPending ? "pending" : isActive ? "text-orange-600 font-semibold" : ""
                     }>Home</NavLink>
             <NavLink to='/donation-campaigns' className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-[#d94d5a] font-semibold" : ""
+                    isPending ? "pending" : isActive ? "text-orange-600 font-semibold" : ""
                     }>Donation Campaigns</NavLink>
             <NavLink to='/how-to-help' className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-[#d94d5a] font-semibold" : ""
+                    isPending ? "pending" : isActive ? "text-orange-600 font-semibold" : ""
                     }>How to Help</NavLink>
             <NavLink to='/dashboard' className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-[#d94d5a] font-semibold" : ""
+                    isPending ? "pending" : isActive ? "text-orange-600 font-semibold" : ""
                     }>Dashboard</NavLink>
          </>
     return (
@@ -43,7 +43,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-2">
                 <FaUserCircle className="text-3xl" />
-                <a className="btn border hover:border-[#d94d5a] hover:bg-white bg-[#d94d5a] text-white hover:text-black">Login</a>
+                <a className="btn border hover:border-orange-600 hover:bg-white bg-orange-600 text-white hover:text-black">Login</a>
             </div>
         </div>
     );
