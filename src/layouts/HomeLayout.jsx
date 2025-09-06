@@ -1,10 +1,12 @@
-import Navbar from "../components/Navbar";
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 
 const HomeLayout = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <Helmet>
+                <title>Home || ClothAid</title>
+            </Helmet>
             <Header></Header>
         </div>
     );

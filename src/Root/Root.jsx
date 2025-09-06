@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-import HomeLayout from "../layouts/HomeLayout";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const Root = () => {
     return (
         <div>
             <div className="font-montserrat w-10/11 mx-auto">
-                <HomeLayout></HomeLayout>
+                <Navbar></Navbar>
                 <Outlet></Outlet>
             </div>
                 <Footer></Footer>
