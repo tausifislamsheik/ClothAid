@@ -43,7 +43,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-2">
                 <FaUserCircle className="text-3xl" />
-                <a className="btn border hover:border-orange-600 hover:bg-white bg-orange-600 text-white hover:text-black">Login</a>
+                <a className="btn border hover:border-orange-600 hover:bg-white bg-orange-600 text-white hover:text-orange-600">Login</a>
             </div>
         </div>
     );
