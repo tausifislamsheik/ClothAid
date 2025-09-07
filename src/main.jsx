@@ -11,6 +11,7 @@ import DonationCampaigns from './layouts/DonationCampaigns';
 import HowToHelp from './layouts/HowToHelp';
 import DashboardLayout from './layouts/DashboardLayout';
 import DonationDetails from './components/DonationDetails';
+ import { ToastContainer } from 'react-toastify';
 
 
 const router = createBrowserRouter([
@@ -47,5 +48,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </StrictMode>,
 )

@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import logo from '../assets/clothes.png'
+import { toast } from "react-toastify";
 
 const DonationDetails = () => {
     
@@ -20,6 +21,11 @@ const DonationDetails = () => {
     const {img, title, description, division, quantity, itemType,
         pickupLocation
      } = detail;
+
+     const handleSubmit = (e) =>{
+          e.preventDefault();
+          toast('Thank You ! We will reach your destination soon')
+     }
     
     return (
         <div>
@@ -28,7 +34,7 @@ const DonationDetails = () => {
                  <p>“This winter, let’s open our hearts and closets. Your unused jackets, sweaters, or blankets can bring warmth, hope, and protection <br /> to someone in need. A small donation can make a big difference in saving lives from the cold.”</p>
              </div>
               <div className="grid md:grid-cols-12 mt-16 gap-7">
-            <div className="card bg-base-100 border border-gray-300 p-7 col-span-8">
+            <div className="card bg-base-100 border border-gray-300 p-7 col-span-4 md:col-span-8">
                 <figure>
                     <img
                     className="w-full h-[400px] object-cover"
@@ -36,7 +42,7 @@ const DonationDetails = () => {
                     alt={title} />
                 </figure>
                 <div className="card-body px-0">
-                    <h2 className="card-title text-2xl md:text-4xl font-bold pb-2">
+                    <h2 className="card-title text-2xl md:text-3xl font-bold pb-2">
                     {title}
                     </h2>
                     <div className="grid grid-cols-2 bg-gray-100 text-center py-7 rounded-lg space-y-5">
@@ -64,9 +70,10 @@ const DonationDetails = () => {
                 <div className="p-5">
                     <div className="flex items-center py-4 pb-10 gap-3 px-10">
                           <img className="w-10 h-10" src={logo} alt="" />
-                          <h1 className="text-3xl font-semibold">Make a Donation</h1>
+                          <h1 className="text-2xl md:text-3xl font-semibold">Make a Donation</h1>
                     </div>
-                   <fieldset className="fieldset space-y-3">
+                   <form onSubmit={handleSubmit}>
+                       <fieldset className="fieldset space-y-3">
                         <label className="label text-lg text-gray-500 font-semibold">Your Name</label>
                         <input type="text" className="input w-full" placeholder="Enter your full name" />
                         <label className="label text-lg text-gray-500 font-semibold">Email Address</label>
@@ -77,8 +84,13 @@ const DonationDetails = () => {
                         <input type="text" className="input w-full" placeholder="e.g., House 12, Road 5, Dhanmondi, Dhaka" />
                         <label className="label text-lg text-gray-500 font-semibold">Preferred Pickup Date</label>
                         <input type="date" className="input w-full" placeholder="e.g., House 12, Road 5, Dhanmondi, Dhaka" />
+                        <label className="label">
+                        <input type="checkbox" className="checkbox" />
+                        <p className="font-semibold">I agree to the terms and conditions and confirm that <br /> the donated items are in good condition.</p>
+                        </label>
                         <button className="btn bg-orange-600 text-white mt-4">Confirm Donation</button>
                     </fieldset>
+                   </form>
                 </div>
              </div>
         </div>

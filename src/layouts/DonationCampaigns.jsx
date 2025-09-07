@@ -14,7 +14,7 @@ const DonationCampaigns = () => {
             <div>
                 <section className="bg-white border border-gray-300 p-10 my-10 rounded-xl">
                     <div>
-                        <h2 className="mb-7 text-3xl font-bold">Find Campaigns</h2>
+                        <h2 className="mb-7 text-2xl md:text-3xl font-bold">Find Campaigns</h2>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
                             <div className="flex flex-col">
                                 <label className="mb-2 font-semibold">Location</label>
@@ -63,7 +63,7 @@ const DonationCampaigns = () => {
                     </div>
                 </section>
             </div>
-            <h1 className="text-4xl font-bold my-10">Current Campaigns</h1>
+            <h1 className="text-2xl md:text-3xl font-bold my-10">Current Campaigns</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
                 data?.map(campaignData => <DonationCampaign key={campaignData.id} campaignData={campaignData}></DonationCampaign>)
