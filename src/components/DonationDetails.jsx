@@ -1,5 +1,6 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import DonationForm from "./DonationForm";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const DonationDetails = () => {
     
@@ -59,6 +60,9 @@ const DonationDetails = () => {
                         </div>
                     </div>
                     <p className="md:text-lg text-gray-500">{description}</p>
+                    <div className="card-actions justify-end">
+                        <Link to='/donation-campaigns' className="btn bg-orange-600 text-white"><FaArrowLeftLong /> Back to Campaigns</Link>
+                    </div>
                 </div>
             </div>
              <div className="col-span-4 border border-gray-300 rounded-lg">

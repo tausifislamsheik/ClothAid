@@ -26,12 +26,20 @@ const router = createBrowserRouter([
       {
         path:"/donation-campaigns",
         element: <DonationCampaigns></DonationCampaigns>,
-        loader: () => fetch('donationData.json')
+        loader: async () => {
+        const res = await fetch('/donationData.json');
+        if (!res.ok) throw new Error('Failed to load donation data');
+        return res.json();
+        }
       },
       {
         path:'/donation-details/:id',
         element: <DonationDetails></DonationDetails>,
-        loader: () => fetch('donationData.json')
+        loader: async () => {
+        const res = await fetch('/donationData.json');
+        if (!res.ok) throw new Error('Failed to load donation data');
+        return res.json();
+        }
       },
       {
         path:"/how-to-help",
