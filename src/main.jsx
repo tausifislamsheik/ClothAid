@@ -12,6 +12,7 @@ import HowToHelp from './layouts/HowToHelp';
 import DashboardLayout from './layouts/DashboardLayout';
 import DonationDetails from './components/DonationDetails';
  import { ToastContainer } from 'react-toastify';
+import Login from './components/Login';
 
 
 const router = createBrowserRouter([
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path:"/dashboard",
         element: <DashboardLayout></DashboardLayout>
+      },
+      {
+        path:"/auth/login",
+        element: <Login></Login>
       }
     ]
   },
