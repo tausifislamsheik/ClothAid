@@ -13,6 +13,7 @@ import DashboardLayout from './layouts/DashboardLayout';
 import DonationDetails from './components/DonationDetails';
  import { ToastContainer } from 'react-toastify';
 import Login from './components/Login';
+import Register from './components/Register';
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path:"/auth/login",
         element: <Login></Login>
+      },
+      {
+        path:"/auth/register",
+        element: <Register></Register>
       }
     ]
   },
