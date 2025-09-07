@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const DonationCampaign = ({campaignData}) => {
 
-    const {img, title, description, division} = campaignData;
+    const {id, img, title, description, division} = campaignData;
     return (
         <div className="card bg-base-100 border border-gray-300 p-5 transition-transform duration-400 hover:scale-105">
             <figure>
@@ -16,7 +18,9 @@ const DonationCampaign = ({campaignData}) => {
                     <p className="font-bold bg-gray-100 inline p-3 rounded-3xl text-gray-500">{division}</p>
                 </div>
                 <div className="card-actions justify-end">
-                <button className="btn bg-orange-600 text-white">Donate Now</button>
+                <Link to={`/donation-details/${id}`}>
+                  <button className="btn bg-orange-600 text-white">Donate Now</button>
+                </Link>
                 </div>
             </div>
         </div>

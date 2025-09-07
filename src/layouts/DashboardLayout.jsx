@@ -5,7 +5,7 @@ const DashboardLayout = () => {
         <div>
             
             <Helmet>
-                <title>Dashboard || ClothAid</title>
+                <title>Dashboard | ClothAid</title>
             </Helmet>
         </div>
     );

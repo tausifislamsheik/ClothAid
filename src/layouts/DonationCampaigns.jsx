@@ -9,7 +9,7 @@ const DonationCampaigns = () => {
     return (
         <div>
             <Helmet>
-                <title>Donation Campaigns || ClothAid</title>
+                <title>Donation Campaigns | ClothAid</title>
             </Helmet>
             <div>
                 <section className="bg-white border border-gray-300 p-10 my-10 rounded-xl">

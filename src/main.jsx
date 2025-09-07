@@ -10,6 +10,7 @@ import HomeLayout from './layouts/HomeLayout';
 import DonationCampaigns from './layouts/DonationCampaigns';
 import HowToHelp from './layouts/HowToHelp';
 import DashboardLayout from './layouts/DashboardLayout';
+import DonationDetails from './components/DonationDetails';
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
       {
         path:"/donation-campaigns",
         element: <DonationCampaigns></DonationCampaigns>,
+        loader: () => fetch('donationData.json')
+      },
+      {
+        path:'/donation-details/:id',
+        element: <DonationDetails></DonationDetails>,
         loader: () => fetch('donationData.json')
       },
       {

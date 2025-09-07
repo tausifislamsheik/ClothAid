@@ -4,7 +4,7 @@ const HowToHelp = () => {
     return (
         <div>
             <Helmet>
-                <title>How to Help || ClothAid</title>
+                <title>How to Help | ClothAid</title>
             </Helmet>
         </div>
     );

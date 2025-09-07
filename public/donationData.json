@@ -3,63 +3,90 @@
     "id": 1,
     "img": "https://i.ibb.co.com/tpbgXPqL/images.jpg",
     "title": "Warm Jackets for Street Children",
-    "description": "Donate winter jackets to help children living on the streets stay warm during the cold nights.",
-    "division": "Dhaka"
+    "description": "Thousands of children live on the streets without proper shelter, struggling against the cold every winter night. Your jacket donation will provide them with warmth, protection, and comfort, helping them sleep safely and attend school with confidence despite the harsh weather.",
+    "division": "Dhaka",
+    "quantity": 2,
+    "itemType": "Jacket",
+    "pickupLocation": "House 12, Road 5, Dhanmondi, Dhaka"
   },
   {
     "id": 2,
     "img": "https://i.ibb.co.com/hFm7RwJN/Untitled-design-1.jpg",
     "title": "Blankets for Homeless Families",
-    "description": "Your blanket donation will give homeless families warmth and protection this winter.",
-    "division": "Chattogram"
+    "description": "Homeless families often spend freezing nights without protection. A blanket is more than fabric—it is warmth, dignity, and safety for children and parents alike. By donating blankets, you can help families endure harsh winters and prevent sickness caused by extreme cold.",
+    "division": "Chattogram",
+    "quantity": 3,
+    "itemType": "Blanket",
+    "pickupLocation": "House 21, Agrabad, Chattogram"
   },
   {
     "id": 3,
     "img": "https://i.ibb.co.com/xSCNshYg/two-elderly-people-man-woman-260nw-2555333511.webp",
     "title": "Sweaters for Elderly People",
-    "description": "Support the elderly by donating sweaters to keep them safe from the freezing cold.",
-    "division": "Rajshahi"
+    "description": "The elderly are highly vulnerable to the cold, and many cannot afford proper winter clothing. A sweater donation ensures they stay warm, protected, and healthy. Your small act of kindness can make their winters safer and more comfortable, reducing illness risks.",
+    "division": "Rajshahi",
+    "quantity": 5,
+    "itemType": "Sweater",
+    "pickupLocation": "House 8, Shaheb Bazar, Rajshahi"
   },
   {
     "id": 4,
     "img": "https://i.ibb.co.com/39f9BjqK/istockphoto-1091723838-612x612.jpg",
     "title": "Winter Clothes for School Kids",
-    "description": "Help underprivileged school kids attend classes without suffering from the winter chill.",
-    "division": "Khulna"
+    "description": "Many underprivileged children miss school during winter because they lack warm clothes. Donating jackets, sweaters, or scarves allows them to attend classes confidently without suffering from cold. Your contribution empowers children with both education and comfort, giving them brighter opportunities ahead.",
+    "division": "Khulna",
+    "quantity": 10,
+    "itemType": "Winter Clothes",
+    "pickupLocation": "School Road, Sonadanga, Khulna"
   },
   {
     "id": 5,
     "img": "https://i.ibb.co.com/dsQVGNMJ/pashtush-pashmina-pashtush-women-pure-wool-woolmark-certified-shawl-ethnic-weave-design-multicolour.webp",
     "title": "Shawls for Women in Villages",
-    "description": "Donate shawls to women in rural villages to protect them from cold weather.",
-    "division": "Barishal"
+    "description": "In rural villages, women spend long hours working outdoors in harsh winter conditions without adequate clothing. Donating shawls gives them warmth and dignity, protecting their health. A simple shawl provides comfort, shields from cold, and helps women continue their daily responsibilities.",
+    "division": "Barishal",
+    "quantity": 4,
+    "itemType": "Shawl",
+    "pickupLocation": "Village Market Road, Barishal"
   },
   {
     "id": 6,
     "img": "https://i.ibb.co.com/6cZL316X/Mens-1-Pack-of-Heavy-Thermal-Sock-Pack-of-3-Gloves-25-G044-FRSP.webp",
     "title": "Gloves and Socks for Workers",
-    "description": "Support daily wage workers by donating gloves and socks to keep them warm during long shifts.",
-    "division": "Sylhet"
+    "description": "Daily wage workers spend long hours outdoors, exposed to severe cold while earning their livelihood. Gloves and socks keep their hands and feet warm, improving comfort and productivity. Donating these essentials is a small gesture that makes a big difference daily.",
+    "division": "Sylhet",
+    "quantity": 6,
+    "itemType": "Gloves & Socks",
+    "pickupLocation": "Amberkhana, Sylhet"
   },
   {
     "id": 7,
     "img": "https://i.ibb.co.com/5hZMDX00/Flood-Relief-Kit-Flood-Control-Emergency-Shoulder-Strap-Backpack-Fire-Rescue-Kit-Disaster-Prevention.jpg",
     "title": "Winter Kit for Flood Victims",
-    "description": "Provide a full winter kit including sweaters, blankets, and gloves for families affected by floods.",
-    "division": "Rangpur"
+    "description": "Flood-affected families often lose everything, including warm clothing. A winter kit with sweaters, blankets, and gloves gives them immediate relief and restores hope. Your donation provides comfort, prevents illness, and supports families rebuilding their lives after devastating natural disasters and hardship.",
+    "division": "Rangpur",
+    "quantity": 8,
+    "itemType": "Winter Kit",
+    "pickupLocation": "Relief Camp, Rangpur Sadar"
   },
   {
     "id": 8,
     "img": "https://i.ibb.co.com/4nNhjTnq/shutterstock-796392490-scaled.jpg",
     "title": "Reuse Old Winter Clothes",
-    "description": "Donate your old but usable winter clothes to help low-income communities.",
-    "division": "Mymensingh"
+    "description": "Old but usable winter clothes can still change lives for low-income communities. Instead of wasting, donate coats, sweaters, and jackets. Your unused clothing becomes someone else’s lifeline during freezing nights, protecting families from cold and giving them dignity through kindness.",
+    "division": "Mymensingh",
+    "quantity": 12,
+    "itemType": "Old Winter Clothes",
+    "pickupLocation": "House 33, Town Hall Road, Mymensingh"
   },
   {
     "id": 9,
     "img": "https://i.ibb.co.com/cs1KmCj/il-fullxfull-4189491881-8qco.webp",
     "title": "Warm Clothes for Newborn Babies",
-    "description": "Protect newborn babies from the harsh winter by donating warm clothes and blankets.",
-    "division": "Dhaka"
+    "description": "Newborn babies are extremely vulnerable to cold weather and cannot regulate their body temperature. Donating warm clothes and blankets ensures they remain safe, healthy, and protected. Your kindness shields infants from life-threatening risks and gives families much-needed comfort during winter challenges.",
+    "division": "Dhaka",
+    "quantity": 7,
+    "itemType": "Baby Clothes",
+    "pickupLocation": "House 45, Mirpur 10, Dhaka"
   }
 ]

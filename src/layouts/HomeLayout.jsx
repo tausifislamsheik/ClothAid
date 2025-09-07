@@ -6,7 +6,7 @@ const HomeLayout = () => {
     return (
         <div>
             <Helmet>
-                <title>Home || ClothAid</title>
+                <title>Home | ClothAid</title>
             </Helmet>
             <Header></Header>
             <Main></Main>
