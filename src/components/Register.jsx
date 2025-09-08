@@ -47,7 +47,7 @@ const Register = () => {
                         <button className="btn bg-orange-600 text-white mt-4">Login</button>
                         </fieldset>
                     </form>
-                    <h1 className="text-center pt-4">Already have an account? <Link className="text-red-700 font-semibold" to='/auth/login'>Login</Link></h1>
+                    <h1 className="text-center pt-4">Already have an account? <Link className="text-red-700 font-semibold" to='/login'>Login</Link></h1>
                     </div>
                 </div>
         </div>
