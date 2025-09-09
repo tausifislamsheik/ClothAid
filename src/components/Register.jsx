@@ -50,7 +50,7 @@ const Register = () => {
                         <label className="label text-lg font-semibold">Password</label>
                         <input type="password" name="password" className="input w-full bg-gray-100 border-none" placeholder="Enter your password" required />
                         {
-                            error.password && <p className="text-red-500 text-center font-semibold">{error.password}</p>
+                            error?.password && <p className="text-red-500 text-center font-semibold">{error.password}</p>
                         }
                         <button className="btn bg-orange-600 text-white mt-4">Register</button>
                         </fieldset>
