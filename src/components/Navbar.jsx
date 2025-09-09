@@ -1,8 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import navLogo from '../assets/clothes.png'
 import { FaUserCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+
+    const {user,logoutUser} = useContext(AuthContext);
+
+    const handleLogout = () =>{
+          logoutUser()
+          .then(() =>{
+            console.log('User logout successfully')
+          })
+          .catch((error) => console.log(error.message))
+    }
 
     const navLinks = <>
             <NavLink to='/' className={({ isActive, isPending }) =>
@@ -43,9 +55,17 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-2">
                 <FaUserCircle className="text-3xl" />
-                <Link to='/login'>
+                {
+                    user ? <div>
+                       <p>{user.name}</p>
+                       <p>{user.email}</p>
+                       <div>
+                        <Link className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 px-5" onClick={handleLogout}>Log-out</Link>
+                       </div>
+                    </div> : <Link to='/login'>
                    <button className="btn border hover:border-orange-600 hover:bg-white bg-orange-600 text-white hover:text-orange-600 px-7">Login</button>
-                </Link>
+                  </Link>
+                }
             </div>
         </div>
     );
