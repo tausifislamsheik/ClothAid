@@ -25,6 +25,13 @@ const Register = () => {
             setError(null)
           }
 
+          const strongPw = /^(?=\S{8,64}$)(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).+$/;
+
+          if(!strongPw.test(password)){
+            setError({...error, password:'Must have an uppercase, a lowercase, a number and a special symbol'})
+            return;
+        }
+
           createUser(email, password, name, photo)
           .then(result => {
             console.log(result.user)
