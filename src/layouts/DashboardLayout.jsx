@@ -1,11 +1,14 @@
-import { useState } from 'react';
-import { User, Mail, Phone, MapPin, Edit, Camera, Heart, Package, Clock } from 'lucide-react';
+import { useContext, useState } from 'react';
+import { User, Mail, Phone, MapPin, Edit, Camera, Heart, Package, Clock, Bell } from 'lucide-react';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Dashboard = () => {
+
+    const {user1} = useContext(AuthContext)
   // Sample user data - in real app this would come from backend/context
   const [user] = useState({
-    name: "Ahmed Rahman",
-    email: "ahmed.rahman@email.com",
+    name: "Tausif Islam Sheik",
+    email: "tausif.sheik@email.com",
     phone: "+880 1234-567890",
     location: "Dhaka, Bangladesh",
     avatar: null,
@@ -63,28 +66,6 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-3">
-              <div className="text-2xl font-bold text-orange-600">ClothAid</div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <button className="p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100">
-                <Bell className="h-5 w-5" />
-              </button>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                  <span className="text-orange-600 font-semibold text-sm">{user.name.charAt(0)}</span>
-                </div>
-                <span className="text-sm font-medium text-gray-700">{user.name}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Welcome Section */}
         <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg p-6 text-white mb-8">
