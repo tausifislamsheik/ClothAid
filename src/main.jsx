@@ -15,6 +15,7 @@ import DonationDetails from './components/DonationDetails';
 import Login from './components/Login';
 import Register from './components/Register';
 import AuthProvider from './Provider/AuthProvider';
+import PrivateRoute from './Route/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/donation-details/:id',
-        element: <DonationDetails></DonationDetails>,
+        element: <PrivateRoute><DonationDetails></DonationDetails></PrivateRoute>,
         loader: async () => {
         const res = await fetch('/donationData.json');
         if (!res.ok) throw new Error('Failed to load donation data');
