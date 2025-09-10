@@ -45,7 +45,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex gap-2 items-center">
                 <img className="w-8 md:w-10" src={navLogo} alt="" />
-                <p className="text-xl md:text-3xl font-bold">ClothAid</p>
+                <p onClick={() => window.location.reload()} className="text-xl md:text-3xl font-bold cursor-pointer">ClothAid</p>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
