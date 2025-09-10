@@ -56,7 +56,7 @@ const DonationDetails = () => {
                         </div>
                         <div>
                             <p className="text-gray-600">🔰 Division</p>
-                            <h1 className="md:text-2xl font-semibold">{division}</h1>
+                            <h1 className="md:text-xl font-semibold">{division}</h1>
                         </div>
                     </div>
                     <p className="md:text-lg text-gray-500">{description}</p>
