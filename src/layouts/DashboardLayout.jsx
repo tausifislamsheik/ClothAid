@@ -1,10 +1,8 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { User, Mail, Phone, MapPin, Edit, Camera, Heart, Package, Clock, Bell } from 'lucide-react';
-import { AuthContext } from '../Provider/AuthProvider';
 
 const Dashboard = () => {
 
-    const {user1} = useContext(AuthContext)
   // Sample user data - in real app this would come from backend/context
   const [user] = useState({
     name: "Tausif Islam Sheik",
