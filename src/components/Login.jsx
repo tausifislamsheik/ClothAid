@@ -1,13 +1,16 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import { sendPasswordResetEmail } from "firebase/auth";
 import auth from "../Firebase/Firebase.config";
+import { IoMdEye } from "react-icons/io";
+import { IoMdEyeOff } from "react-icons/io";
 
 const Login = () => {
 
     const {loginUser, loginWithGoogle} = useContext(AuthContext)
+    const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate();
     const location = useLocation();
     const emailRef = useRef();
@@ -68,7 +71,12 @@ const Login = () => {
                         <input type="email" name="email" ref={emailRef} className="input w-full bg-gray-100 border-none" placeholder="Enter your email address" required />
                         <div className="relative">
                             <label className="label text-lg font-semibold">Password</label>
-                            <input type="password" name="password" className="input w-full bg-gray-100 border-none" placeholder="Enter your password" required />
+                            <input type={showPassword ? 'text' : 'password'} name="password" className="input w-full bg-gray-100 border-none" placeholder="Enter your password" required />
+                        </div>
+                        <div onClick={() => setShowPassword(!showPassword)} className="absolute text-xl right-14 bottom-73 cursor-pointer">
+                            {
+                                showPassword ? <IoMdEyeOff /> : <IoMdEye />
+                            }
                         </div>
                         <div onClick={handleForgotPassword}><a className="link link-hover text-gray-500">Forgot password?</a></div>
                         <button className="btn bg-orange-600 text-white mt-4">Login</button>
