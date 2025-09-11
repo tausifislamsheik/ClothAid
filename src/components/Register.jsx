@@ -16,6 +16,7 @@ const Register = () => {
           const photo = form.get('photo')
           const email = form.get('email')
           const password = form.get('password')
+          const terms = form.get('terms')
         //   console.log(name, photo)
 
           if(password.length < 8){
@@ -30,6 +31,10 @@ const Register = () => {
           if(!strongPw.test(password)){
             setError({...error, password:'Must have an uppercase, a lowercase, a number and a special symbol'})
             return;
+        }
+
+        if(!terms){
+          setError({...error, terms:'Please accept our terms and conditions.'})
         }
 
           createUser(email, password, name, photo)
@@ -56,8 +61,15 @@ const Register = () => {
                         <input type="email" name="email" className="input w-full bg-gray-100 border-none" placeholder="Enter your email address" required />
                         <label className="label text-lg font-semibold">Password</label>
                         <input type="password" name="password" className="input w-full bg-gray-100 border-none" placeholder="Enter your password" required />
+                        <label className="label">
+                        <input type="checkbox" name="terms" className="checkbox checkbox-xs" required />
+                        <p className="font-semibold">Accept our terms and conditions.</p>
+                        </label>
                         {
                             error?.password && <p className="text-red-500 text-center font-semibold">{error.password}</p>
+                        }
+                        {
+                            error?.terms && <p className="text-red-500 text-center font-semibold">{error.terms}</p>
                         }
                         <button className="btn bg-orange-600 text-white mt-4">Register</button>
                         </fieldset>
