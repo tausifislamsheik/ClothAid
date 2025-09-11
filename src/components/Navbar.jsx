@@ -3,6 +3,7 @@ import navLogo from '../assets/clothes.png'
 import { FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
 
@@ -11,7 +12,7 @@ const Navbar = () => {
     const handleLogout = () =>{
           logoutUser()
           .then(() =>{
-            console.log('User logout successfully')
+            toast('User logout successfully')
           })
           .catch((error) => console.log(error.message))
     }
@@ -43,9 +44,9 @@ const Navbar = () => {
                     {navLinks}
                 </ul>
                 </div>
-                <div className="flex gap-2 items-center">
+                <div onClick={() => window.location.reload()} className="flex gap-2 items-center cursor-pointer">
                 <img className="w-8 md:w-10" src={navLogo} alt="" />
-                <p onClick={() => window.location.reload()} className="text-xl md:text-3xl font-bold cursor-pointer">ClothAid</p>
+                <p className="text-xl md:text-3xl font-bold">ClothAid</p>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

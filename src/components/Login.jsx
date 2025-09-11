@@ -1,13 +1,16 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import { sendPasswordResetEmail } from "firebase/auth";
+import auth from "../Firebase/Firebase.config";
 
 const Login = () => {
 
     const {loginUser, loginWithGoogle} = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
+    const emailRef = useRef();
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -23,9 +26,9 @@ const Login = () => {
             e.target.reset();
             navigate('/');
             navigate(location?.state ? location.state : '/');
-            toast('User successfully login')
+            toast.success('User successfully login')
         })
-        .catch(error => console.log(error.message))
+        .catch(() => toast.error('Invalid email or password'))
     }
 
     const handleLoginGoogle = () =>{
@@ -34,9 +37,22 @@ const Login = () => {
             console.log(result.user)
             navigate('/');
             navigate(location?.state ? location.state : '/');
-            toast('User successfully login')
+            toast.success('User successfully login')
           })
           .catch(error => console.log(error.message))
+    }
+
+    const handleForgotPassword = () =>{
+        const email = emailRef.current.value;
+        if(!email){
+            toast.error('Please provide a valid email')
+        }else{
+            sendPasswordResetEmail(auth, email)
+            .then(() =>{
+                toast.success('Password reset email sent!')
+            })
+            .catch(error => console.log(error.message))
+        }
     }
 
 
@@ -49,12 +65,12 @@ const Login = () => {
                     <form onSubmit={handleSubmit}>
                         <fieldset className="fieldset space-y-2">
                         <label className="label text-lg font-semibold">Email</label>
-                        <input type="email" name="email" className="input w-full bg-gray-100 border-none" placeholder="Enter your email address" required />
+                        <input type="email" name="email" ref={emailRef} className="input w-full bg-gray-100 border-none" placeholder="Enter your email address" required />
                         <div className="relative">
                             <label className="label text-lg font-semibold">Password</label>
                             <input type="password" name="password" className="input w-full bg-gray-100 border-none" placeholder="Enter your password" required />
                         </div>
-                        <div><a className="link link-hover text-gray-500">Forgot password?</a></div>
+                        <div onClick={handleForgotPassword}><a className="link link-hover text-gray-500">Forgot password?</a></div>
                         <button className="btn bg-orange-600 text-white mt-4">Login</button>
                         </fieldset>
                         <div className="divider">or</div>
