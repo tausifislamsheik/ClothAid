@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { User, Mail, Phone, MapPin, Edit, Camera, Heart, Package, Clock, Bell } from 'lucide-react';
+import { User, Mail, Phone, MapPin, Edit, Camera, Heart, Package, Clock } from 'lucide-react';
 
 const Dashboard = () => {
 

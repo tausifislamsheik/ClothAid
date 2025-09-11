@@ -57,12 +57,12 @@ const Navbar = () => {
             <div className="navbar-end gap-2">
                 <FaUserCircle className="text-3xl" />
                 {
-                    user ? <div>
-                       <p>{user.name}</p>
-                       <p>{user.email}</p>
-                       <div>
+                    user ? <div className="dropdown dropdown-bottom dropdown-center">
+                    <div tabIndex={0} role="button" className="btn m-1">{user.email}</div>
+                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-48 p-5 px-10 shadow-sm">
                         <Link className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 px-5" onClick={handleLogout}>Log-out</Link>
-                       </div>
+                        
+                    </ul>
                     </div> : <Link to='/login'>
                    <button className="btn border hover:border-orange-600 hover:bg-white bg-orange-600 text-white hover:text-orange-600 px-7">Login</button>
                   </Link>
