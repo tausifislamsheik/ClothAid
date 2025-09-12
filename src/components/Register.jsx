@@ -17,8 +17,8 @@ const Register = () => {
           const email = form.get('email')
           const password = form.get('password')
           const terms = form.get('terms')
-        //   console.log(name, photo)
-
+          console.log(name, photo)
+          
           if(password.length < 8){
               setError({...error, password:'password must be 8 characters or longer'})
               return;
@@ -37,7 +37,7 @@ const Register = () => {
           setError({...error, terms:'Please accept our terms and conditions.'})
         }
 
-          createUser(email, password, name, photo)
+          createUser(email, password)
           .then(result => {
             console.log(result.user)
             e.target.reset();

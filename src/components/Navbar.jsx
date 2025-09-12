@@ -55,17 +55,24 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-2">
-                <FaUserCircle className="text-3xl" />
+                
                 {
-                    user ? <div className="dropdown dropdown-bottom dropdown-center">
-                    <div tabIndex={0} role="button" className="btn m-1">{user.email}</div>
-                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-48 p-5 px-10 shadow-sm">
-                        <Link className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 px-5" onClick={handleLogout}>Log-out</Link>
+                    user ? <div className="flex items-center gap-3"> 
+                    <img className='w-12 h-12 rounded-full' src={user?.photoURL} alt="" />
+                        <div className="dropdown dropdown-bottom dropdown-center">
+                    <div tabIndex={0} role="button" className="btn m-1">{user?.displayName || 'user'}</div>
+                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 p-5 shadow-sm space-y-2">
+                        <p className='text-sm font-semibold'>{user?.email}</p>
+                        <Link className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 mx-7" onClick={handleLogout}>Log-out</Link>
                         
                     </ul>
-                    </div> : <Link to='/login'>
+                    </div>
+                    </div> :<>
+                    <FaUserCircle className="text-3xl" />
+                    <Link to='/login'>
                    <button className="btn border hover:border-orange-600 hover:bg-white bg-orange-600 text-white hover:text-orange-600 px-7">Login</button>
                   </Link>
+                    </> 
                 }
             </div>
         </div>
