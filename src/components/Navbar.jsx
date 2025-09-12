@@ -58,9 +58,9 @@ const Navbar = () => {
                 
                 {
                     user ? <div className="flex items-center gap-3"> 
-                    <img className='w-10 h-10 rounded-full' src={user?.photoURL || '/profile.jpeg'} alt="profile" />
+                    <img className='w-10 h-10 rounded-full' src={user?.photoURL} alt="profile" />
                         <div className="dropdown dropdown-bottom dropdown-center">
-                    <div tabIndex={0} role="button" className="btn m-1">{user?.displayName || 'user'}</div>
+                    <div tabIndex={0} role="button" className="btn m-1">{user?.displayName}</div>
                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 p-5 shadow-sm space-y-2">
                         <p className='text-sm font-semibold'>{user?.email}</p>
                         <Link className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 mx-7" onClick={handleLogout}>Log-out</Link>

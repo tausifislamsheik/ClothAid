@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext)
+    const {createUser,userProfileUpdate} = useContext(AuthContext)
     const [error, setError] = useState({});
     const navigate = useNavigate();
 
@@ -17,8 +17,7 @@ const Register = () => {
           const email = form.get('email')
           const password = form.get('password')
           const terms = form.get('terms')
-          console.log(name, photo)
-          
+
           if(password.length < 8){
               setError({...error, password:'password must be 8 characters or longer'})
               return;
@@ -42,6 +41,7 @@ const Register = () => {
             console.log(result.user)
             e.target.reset();
             navigate('/');
+            userProfileUpdate({displayName:name, photoURL:photo})
           })
           .catch(error => console.log(error.message))
     }
